@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таксопарк "ТаксоПарк"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.6);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Шапка -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-taxi text-yellow-500 text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold text-gray-800">ТаксоПарк</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-yellow-500 transition">О нас</a>
+                <a href="#services" class="text-gray-600 hover:text-yellow-500 transition">Услуги</a>
+                <a href="#prices" class="text-gray-600 hover:text-yellow-500 transition">Тарифы</a>
+                <a href="#contact" class="text-gray-600 hover:text-yellow-500 transition">Контакты</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Надёжный таксопарк в вашем городе</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Быстро, комфортно и безопасно. Мы доставим вас куда угодно в любое время суток.</p>
+            <a href="#order" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Заказать такси</a>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">О нашем таксопарке</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Таксопарк" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Мы работаем с 2010 года</h3>
+                    <p class="text-gray-600 mb-4">Наш таксопарк предлагает услуги перевозки пассажиров по городу и за его пределами. Мы гордимся своим безупречным сервисом и профессиональными водителями.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Более 50 автомобилей в парке</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Круглосуточная служба поддержки</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Фиксированные цены без скрытых платежей</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Система скидок для постоянных клиентов</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-500">10+</div>
+                            <div class="text-gray-600">Лет опыта</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-500">50+</div>
+                            <div class="text-gray-600">Автомобилей</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-500">1000+</div>
+                            <div class="text-gray-600">Довольных клиентов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Наши услуги</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-yellow-100 text-yellow-500 mb-4">
+                        <i class="fas fa-city text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Городские перевозки</h3>
+                    <p class="text-gray-600 text-center">Быстрое и комфортное передвижение по городу в любое время суток.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 text-blue-500 mb-4">
+                        <i class="fas fa-plane text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Трансфер в аэропорт</h3>
+                    <p class="text-gray-600 text-center">Пунктуальный трансфер в аэропорт и обратно с фиксированной ценой.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-green-100 text-green-500 mb-4">
+                        <i class="fas fa-road text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Междугородние поездки</h3>
+                    <p class="text-gray-600 text-center">Комфортабельные автомобили для поездок в другие города.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-purple-100 text-purple-500 mb-4">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Бизнес-класс</h3>
+                    <p class="text-gray-600 text-center">Премиальные автомобили для деловых поездок и важных встреч.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-red-100 text-red-500 mb-4">
+                        <i class="fas fa-calendar-day text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Аренда на сутки</h3>
+                    <p class="text-gray-600 text-center">Удобная аренда автомобиля с водителем на целый день.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-indigo-100 text-indigo-500 mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Групповые перевозки</h3>
+                    <p class="text-gray-600 text-center">Микроавтобусы для перевозки групп до 8 человек.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section id="prices" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Наши тарифы</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:border-yellow-500 transition duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Эконом</h3>
+                    <div class="text-4xl font-bold text-yellow-500 mb-6 text-center">250₽ <span class="text-sm font-normal text-gray-500">/посадка</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Комфортные седаны</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Кондиционер</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Безналичный расчет</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Детское кресло</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg border-2 border-yellow-500 shadow-lg relative">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Популярный</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Комфорт</h3>
+                    <div class="text-4xl font-bold text-yellow-500 mb-6 text-center">350₽ <span class="text-sm font-normal text-gray-500">/посадка</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Премиальные седаны</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Кондиционер</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Безналичный расчет</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Детское кресло</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:border-yellow-500 transition duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Бизнес</h3>
+                    <div class="text-4xl font-bold text-yellow-500 mb-6 text-center">500₽ <span class="text-sm font-normal text-gray-500">/посадка</span></div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Люкс автомобили</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Бутилированная вода</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">VIP обслуживание</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Детское кресло</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заказа -->
+    <section id="order" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-yellow-500 p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Заказать такси</h2>
+                        <p class="mb-6">Заполните форму и мы свяжемся с вами в течение 5 минут для подтверждения заказа.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Телефон</h4>
+                                    <p>+7 (123) 456-78-90</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p>info@taxi-fast.ru</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Часы работы</h4>
+                                    <p>Круглосуточно, без выходных</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="taxiOrderForm" action="https://forms.yandex.ru/u/XXXXXXXXXXXXX/" method="POST">
+                            <input type="hidden" name="form-name" value="taxi-order">
+                            
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                <input type="text" id="name" name="name" required class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="address" class="block text-gray-700 font-medium mb-2">Адрес подачи</label>
+                                <input type="text" id="address" name="address" required class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="destination" class="block text-gray-700 font-medium mb-2">Адрес назначения</label>
+                                <input type="text" id="destination" name="destination" class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="car-type" class="block text-gray-700 font-medium mb-2">Тип автомобиля</label>
+                                <select id="car-type" name="car-type" class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                                    <option value="economy">Эконом (от 250₽)</option>
+                                    <option value="comfort" selected>Комфорт (от 350₽)</option>
+                                    <option value="business">Бизнес (от 500₽)</option>
+                                    <option value="minivan">Минивэн (от 600₽)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="time" class="block text-gray-700 font-medium mb-2">Время подачи</label>
+                                <input type="datetime-local" id="time" name="time" class="input-field w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="child-seat" class="rounded border-gray-300 text-yellow-500 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-200 focus:ring-opacity-50">
+                                    <span class="ml-2 text-gray-700">Нужно детское кресло</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Заказать такси
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Контакты</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Как нас найти</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Адрес</h4>
+                                    <p class="text-gray-600">г. Москва, ул. Примерная, д. 123, офис 45</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Телефон</h4>
+                                    <p class="text-gray-600">+7 (123) 456-78-90</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@taxi-fast.ru</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-yellow-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Часы работы</h4>
+                                    <p class="text-gray-600">Круглосуточно, без выходных</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="h-full">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&amp;source=constructor" width="100%" height="400" frameborder="0" class="rounded-lg shadow-md"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-taxi text-yellow-500 text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold">ТаксоПарк</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">Надёжный таксопарк с 2010 года</p>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                        <i class="fab fa-vk text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                        <i class="fab fa-telegram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2023 Таксопарк "ТаксоПарк"</p>
+                    <p class="text-gray-400 text-sm mt-1">Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-yellow-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Кнопка "Наверх"
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Маска для телефона
+        const phoneInput = document.getElementById('phone');
+        
+        phoneInput.addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : x[1] + ' (' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+        });
+        
+        // Обработка формы
+        const form = document.getElementById('taxiOrderForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Здесь должна быть логика отправки формы в Яндекс.Формы
+            // В реальном проекте нужно заменить XXXXXXX на ID вашей формы
+            
+            // Временное сообщение об успешной отправке
+            alert('Ваша заявка принята! Мы свяжемся с вами в ближайшее время.');
+            form.reset();
+            
+            // В реальном проекте раскомментируйте следующую строку:
+            // this.submit();
+        });
+    </script>
+</body>
+</html>
