@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таксопарк "ТаксоПарк"</title>
+    <title>"ТаксоПарк"</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -35,6 +35,15 @@
             border-radius: 50%;
             margin: 0 auto;
         }
+            .mobile-menu {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        background-size: cover;
+        background-position: center;
+    }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -488,6 +497,43 @@
             // В реальном проекте раскомментируйте следующую строку:
             // this.submit();
         });
+
+
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+    const mobileMenu = document.createElement('div');
+    mobileMenu.className = 'md:hidden fixed inset-0 bg-white z-50 p-4 transform translate-x-full transition-transform duration-300';
+    mobileMenu.innerHTML = `
+        <div class="flex justify-end mb-8">
+            <button id="closeMobileMenu" class="text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-6">
+            <a href="#about" class="text-gray-600 hover:text-yellow-500 transition text-xl">О нас</a>
+            <a href="#services" class="text-gray-600 hover:text-yellow-500 transition text-xl">Услуги</a>
+            <a href="#prices" class="text-gray-600 hover:text-yellow-500 transition text-xl">Тарифы</a>
+            <a href="#contact" class="text-gray-600 hover:text-yellow-500 transition text-xl">Контакты</a>
+        </nav>
+    `;
+    document.body.appendChild(mobileMenu);
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+    });
+
+    document.getElementById('closeMobileMenu').addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+    });
+
+    // Закрытие меню при клике на ссылку
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+        });
+    });
     </script>
 </body>
 </html>
